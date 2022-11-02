@@ -19,7 +19,7 @@ from flask_gravatar import Gravatar
 from functools import wraps
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.getenv('APP_SECRET_KEY')
+app.secret_key = os.getenv('APP_SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap(app)
 login_manager = LoginManager(app)
